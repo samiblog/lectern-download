@@ -5,6 +5,8 @@ Claude Code·Claude 가 프로젝트 폴더에 만든 문서(Markdown·HTML)를 
 
 ![문서 화면](images/doc.png)
 
+> **English**: Lectern is a Windows viewer for skimming and reading the Markdown and HTML documents that Claude Code writes into a project folder. Its interface is available in English — it follows the Windows display language, or choose **Settings (Ctrl+,) → Language → English**. Press **F1** in the app for the English user guide. Download the installer from [Releases](https://github.com/samiblog/lectern-download/releases/latest).
+
 ## 내려받기
 
 **[최신 판 내려받기 (Releases)](https://github.com/samiblog/lectern-download/releases/latest)** — `Lectern-버전-setup.exe`
@@ -18,22 +20,34 @@ Claude Code·Claude 가 프로젝트 폴더에 만든 문서(Markdown·HTML)를 
 - 필요한 것: Windows 10/11 (64비트), Microsoft Edge WebView2 런타임 — Windows 11 에는 기본으로 있고, 없으면 설치 프로그램이 알려 줍니다.
 - 새 판은 같은 방법으로 덮어 설치하면 됩니다. 설정(최근 폴더, 스타일)은 그대로입니다.
 - 제거: Windows 설정 → 앱 → 설치된 앱 → Lectern. 설정 파일(`%APPDATA%\Lectern`)은 남깁니다.
+- 앱 안에서 **F1** 을 누르면 사용설명서가, 툴바의 **?** 버튼(Ctrl+/)을 누르면 단축키 표가 열립니다.
 
 ## 할 수 있는 것
 
-- 폴더를 열면 파일명 대신 **문서 제목으로 보이는 트리**와 **폴더 개요**(방금 바뀐 문서, 문서별 요약)
-- 표·코드·수식·Mermaid 다이어그램·콜아웃·각주, Claude 가 만든 **HTML 보고서**(스크립트는 막고 문서만)
+- **프로젝트 탭**: 폴더마다 탭 하나. 여러 프로젝트를 한 창에서 오가며 보고, 탭마다 읽던 문서와 위치가 그대로 남습니다
+- 사이드바의 **문서·파일·코드** 묶음, 열기 전에 바뀐 문서에 점, **폴더 개요**(방금 바뀐 문서, 문서별 요약)
+- 표·코드·수식·Mermaid 다이어그램·박스글(콜아웃)·각주, Claude 가 만든 **HTML 보고서**(스크립트는 막고 문서만)
 - 문서가 바뀌면 1초 안에 다시 그리고 **바뀐 곳을 표시**
-- **창 나누기**: 문서를 최대 3개까지 나란히 (Ctrl+클릭 또는 우클릭 → 오른쪽 창에 열기). 목차는 선택된 창을 따라감
-- 전체 검색(Ctrl+Shift+F), 문서 안 찾기(Ctrl+F), 빠른 열기(Ctrl+P), 목차, 제목을 눌러 절 접기
+- **코드 읽기 화면**: 코드 파일을 줄 번호·언어 색으로, 오른쪽 목차에 클래스·함수 (실행하거나 고치지 않음)
+- **모아 보기**: 프로젝트의 표·그림·박스글·다이어그램·코드·수식을 종류마다 문서별로 모아 보고, 누르면 그 자리로
+- 목차에 절마다 표·그림 등 구성 요소, 제목을 눌러 절 접기
+- **전체 검색**(문서·코드, Ctrl+Shift+F), 문서 안 찾기(Ctrl+F), **빠른 열기**(문서·코드, Ctrl+P)
+- **오른쪽 터미널**(Ctrl+\`): 프로젝트 폴더에서 PowerShell 을 열어 문서를 보며 Claude Code 를 돌리고, **터미널 모음**으로 여러 프로젝트의 터미널을 한 화면에
 - **스타일 24종**(용도별·분위기별·밝기별로 묶어 보기), **글자 크기** 조절, 한 장만 또렷하게 보는 **장 하이라이트**
 - 본문 우클릭: 원문·표·그림 복사, Claude Code 프롬프트에 붙여 넣을 위치(`@docs/보고서.md 40~52행`) 복사
+- **한국어·English** 화면 (설정의 '언어 · Language', 기본은 Windows 표시 언어), 앱 안 **사용설명서**(F1)
 
-![창 나누기](images/split.png)
+| 코드 읽기 화면 | 모아 보기 |
+|---|---|
+| ![코드 읽기 화면](images/code.png) | ![모아 보기](images/parts.png) |
 
 | 장 하이라이트 | 어두운 스타일 (Dracula) |
 |---|---|
 | ![장 하이라이트](images/spotlight.png) | ![어두운 스타일](images/dark.png) |
+
+| English 화면 (사용설명서) |
+|---|
+| ![English](images/en.png) |
 
 ## 사용 조건
 
@@ -43,5 +57,5 @@ Claude Code·Claude 가 프로젝트 폴더에 만든 문서(Markdown·HTML)를 
 
 ## 포함된 오픈소스
 
-설치 파일에는 Python, pywebview, Flask, watchdog, markdown-it, Mermaid, KaTeX, highlight.js, DOMPurify 등 오픈소스 소프트웨어가 들어 있습니다.
+설치 파일에는 Python, pywebview, Flask, watchdog, markdown-it, Mermaid, KaTeX, highlight.js, DOMPurify, xterm.js 등 오픈소스 소프트웨어가 들어 있습니다.
 각각의 저작권 표시와 라이선스는 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) 에 있습니다.
